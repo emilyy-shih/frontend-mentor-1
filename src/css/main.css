@@ -1,7 +1,161 @@
 /* Decent Defaults */
 
-img,
-video {
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-magenta: hsl(300,43%, 53%);
+  --white: hsl(0,0%,100%);
+  --soft-pink: hsl(333,80%, 67%);
+  --light-gray: hsl(300,24%, 96%);
+  --gray: hsl(303, 10%, 53%);
+
+  --mainfont: 'Spartan', sans-serif;
+}
+img{
   width: 100%;
   height: auto;
 }
+
+.titleintro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials h1{
+  color:hsl(300, 24%, 96%);
+}
+
+.testimonial1{
+  color:hsl(300, 24%, 96%);
+}
+
+body{
+  background-image: url(../img/bg-pattern-top-mobile.svq), url(../img/bg-pattern-bottom-mobile.svg);
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: var(--mainfont);
+  margin: 0 1rem;
+
+/* how to add background image, background repeat, background position, and overflow here */
+}
+
+main{
+  max-width: 60rem;
+  margin: auto;
+}
+
+.intro{
+  max-width: 60rem;
+  margin: auto;
+}
+
+.titleintro{
+  color:hsl(300,43%, 22%);
+  font-size: 45px;
+  margin: 25px 500px 25px 1px;
+  line-height: 50px;
+}
+
+.titleblurb{
+  margin: 2px 480px 1px 1px;
+  color:hsl(303, 10%, 53%);
+  font-weight: bold;
+  
+}
+
+.ratings{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ratingscard{
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: hsl(300, 24%, 96%);
+  margin-top: 1rem;
+  position: relative;
+
+
+}
+.ratingstars{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.ratings.blurb{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.testimonials{
+  display: grid;
+  gap: 1rem;
+}
+
+.testimonial{
+  background-color: hsl(300,43%, 22%);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.testimonial img{
+  max-width: 4rem;
+  border-radius: 9999px;
+}
+
+.testimonial1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.testimonialauthor{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+@media (min-width: 40em){
+  .testimonials{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .testimonial:nth-of-type(2){
+    position: relative;
+    transform: translateY(1.5rem);
+  }
+  .testimonial:nth-of-type(3){
+    position: relative;
+    transform: translateY(3.5rem);
+  }
+  .ratingscard:nth-of-type(2){
+    position: relative;
+    transform: translateX(3rem);
+  }
+  .ratingscard:nth-of-type(3){
+    position: relative;
+    transform: translateX(6rem);
+}
+
+  
+
+
+/* use repeat(auto-fit, minmax(10rem, 1fr)); to have a responsive fit
